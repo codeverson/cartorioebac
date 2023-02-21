@@ -121,10 +121,21 @@ int deletar()
 }
 	
 int main ()
-{
-int opcao=0; //definindo a variável inteira opção
-int laco=1;
+	{
+	setlocale(LC_ALL, "Portuguese");
+	int opcao=0; //definindo a variável inteira opção
+	int laco=1;
+	char senhadigitada[10]="a";
+	int comparacao;
 	
+	printf("### Cartório da EBAC ###\n\n");
+	printf("Login de administrador! \n\nDigite a sua senha: ");
+	scanf("%s", senhadigitada);
+	comparacao =strcmp(senhadigitada, "admin");
+	
+	if (comparacao == 0)
+	{ 
+		
 		for(laco=1;laco=1;) //sempre que a variavel for 1, o programa retornará
 		{ 
 		
@@ -168,7 +179,9 @@ int laco=1;
 		system ("pause");
 		break;
 		} //fim da seleção
-		
+      } 
 	} 
+		else
+			printf("Senha incorreta!");
 }
 
